@@ -3,7 +3,7 @@ const { getDB } = require('../config/db');
 const { sendSuccess, sendError } = require('../utils/response');
 const { generateEarningsPDF } = require('../utils/pdfGenerator');
 
-const stripeKey = process.env.STRIPE_SECRET_KEY || '';
+const stripeKey = process.env.STRIPE_SECRET_KEY;
 let stripe = null;
 if (
   stripeKey &&
