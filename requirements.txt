@@ -1,0 +1,406 @@
+A10_CAT-008
+
+🎬Video Explanation: B13-A10-C008.mkv
+Property Rental & Booking Platform
+Demo Link
+
+Dear Candidates,
+We are pleased to inform you that you have successfully passed the first round of
+the selection process!!
+Your application and skills have impressed us, and we are excited to move forward
+with you in the next stages. We are excited to have you explore this opportunity
+with us. This project is designed to assess your skills, creativity, and
+problem-solving abilities. It will help us understand how you approach challenges
+and your ability to deliver high-quality solutions.
+
+🎉
+
+Project Objective:
+The Property Rental & Booking Platform helps property owners list rental
+properties and allows tenants to discover, book, and pay reservation fees online.
+The system includes role-based access control, property management, booking
+workflows, secure payments, review systems, and administrative moderation.
+The platform connects tenants and property owners through a transparent and
+secure rental marketplace.
+
+Ensure the Following things to get 100% mark ( No mark will
+contain)
+●​ Include at least 20 meaningful commits on the client side & 12 meaningful
+commits on the server side with descriptive messages.
+
+●​ Include a README file with the project name, purpose, live URL, key
+features, and any npm packages you have used.
+●​ Secure Frontend configuration keys using environment variables.
+●​ Secure your MongoDB credentials using the environment variable.
+●​ Create a design that encourages recruiters. Color contrast should please
+the eye & ensure that the website has proper alignment, space, and the
+website does not express gobindo design.
+●​ If we found your project similar to any project of your module / conceptual /
+assignment. You will get 0
+
+and may miss the chance of any upcoming
+
+reward.
+
+Deployment Guideline
+If your Deployment is not okay you will get 0 and may miss the chance of our
+upcoming rewards.
+●​ Ensure that your server is working perfectly on production and not throwing
+any CORS / 404 / 504 Errors.
+●​ Ensure that your Live Link is working perfectly and that it is not showing
+errors on Landing in your system.
+●​ ⚠️ ensure that the page doesn't throw any error on reloading from any
+routes.
+●​ ⚠️Logged in User must not redirect to Login on reloading any private route
+
+Layout & Page Structure
+The main section is dynamic and updates according to route changes.
+Header
+Dynamic Content
+Footer
+
+Authentication & Authorization
+1.​ User Registration:
+a.​ Form for users to sign up as users.
+
+b.​ Input fields: name, email, photo(you can use direct link or upload
+through imgbb as you want) and password.
+
+Note: Don’t worry about the standardization of the project, rather implement
+requirements as explained here)
+
+2.​ User Login:
+a.​ JWT-based authentication.
+b.​ Token generation upon successful login to manage sessions
+securely.
+c.​ Implement social login functionality using Google ( For social login by
+default you need to set the user role as a Tenant)
+
+Hints: While implementing social login, ensure the system gracefully assigns the
+user role as a Tenant.
+
+3.​ Role-Based Access Control:
+a.​ Middleware to check user roles and permissions.
+b.​ Protect routes to ensure only authorized users can access certain
+endpoints.
+
+Role-Based Access Control
+Roles:
+●​ Tenant
+●​ Owner
+●​ Admin
+Protect routes based on role permissions.
+
+Main Tasks
+
+Home Page (Public Route)
+
+Navbar
+Contains:
+●​ Logo
+●​ Website Name
+●​ Home
+●​ All Properties
+●​ Login
+●​ Register
+●​ Dashboard (if user login)
+●​ Logout (if user login)
+
+Banner Section
+The banner section should include a high-quality image, a compelling title, and a
+short, engaging description that introduces the page and highlights its main
+purpose.
+Banner should include:
+●​ Search Bar (Location, Property type, Max Price, Min Price)
+
+Featured Properties Section
+Show 6 approved properties using MongoDB limit in card layout.
+
+If user is not logged in:
+View Details → Redirect to Login
+If logged in:
+View Details → Property Details Page
+
+Why Choose Us Section
+
+Create a meaningful section highlighting platform benefits.
+
+Customer Reviews Section
+Show tenant reviews dynamically. (4 good review)
+
+Extra Sections
+Add at least 2 relevant sections.
+Examples:
+●​ Top Locations
+●​ Recently Added Properties
+●​ Rental Statistics
+●​ Trusted Owners
+
+Animation Requirement
+Use Framer Motion in:
+●​ Banner
+●​ Featured Properties
+●​ Review Section (optional)
+●​ Extra Sections (optional)
+
+Property Details Page (Private Route)
+Displays detailed information about a specific Property.
+
+Features
+Add to Favorites - Tenants can save properties to their favorites list. When a
+property is added, it should be stored in the database and displayed in the My
+Favorites section of the tenant dashboard.
+Book Property
+
+Booking Process
+
+Clicking Book Property opens booking modal.
+Fields:
+●​ Move-in Date
+●​ Contact Number
+●​ User Info
+●​ Additional Notes
+After confirmation:
+Redirect the user to the payment page.
+
+Payment
+Use Stripe Payment Gateway.
+After successful payment:
+●​ Create booking record
+●​ Save transaction
+●​ Redirect to user success page
+Booking Status:
+●​ Pending (initial)
+●​ Approved
+●​ Rejected
+
+Review System
+Logged-in tenants can:
+●​ Give Rating
+●​ Write Review
+Display:
+●​ Name
+●​ Email
+●​ Date
+●​ Rating
+
+●​ Comment
+
+All Properties Page (Public Route)
+This page displays all available properties (status should be approved) in a
+3-column grid layout using property cards. Each card showcases essential
+property information, allowing users to browse and explore listings easily.
+
+Search
+Search by:
+●​ Location
+
+Filters
+●​ Property Type
+
+Sorting
+●​ Price Low to High
+●​ Price High to Low
+Backend filtering required.
+
+Tenant Dashboard (Private Route)
+Routes:
+●​ My Bookings
+●​ Favorites
+●​ Profile
+
+My Bookings
+Show all currently login user booking items in a table format.
+Columns:
+
+●​ Property Name
+●​ Booking Date
+●​ Amount Paid
+●​ Booking status
+●​ Payment status
+
+Favorites
+Show all currently login user favorites items in a table format.
+Actions:
+●​ Remove Favorite
+
+Profile
+Every logged-in user (Tenant, Owner, Admin) should have a Profile Page.
+
+Owner Dashboard (Private Route)
+Routes:
+●​ Owner Dashboard Home (Analytics)
+●​ Add Property
+●​ My Properties
+●​ Booking Requests
+
+Owner Dashboard Home (Analytics)
+The Owner Dashboard Home serves as the analytics overview page for the
+currently logged-in owner.
+Summary Cards
+Display 3 summary cards for the current owner:
+●​ Total Earnings
+★​ Sum of all successful booking payments received.
+●​ Total Properties
+★​ Number of properties created by the owner.
+
+●​ Total Bookings
+★​ Number of confirmed bookings across all owner's properties.
+Monthly Earnings Chart
+Display a line chart (react rechart) showing the owner's monthly earnings for the
+last 12 months.
+The chart data should be generated from successful booking payments.
+Monthly earnings
+Monthly earnings of the currently logged-in property owner.
+
+Add Property
+Fields:
+●​ Property Title
+●​ Description
+●​ Location
+●​ Property Type (dropdown)
+●​ Rent (Price)
+●​ Rent Type (Monthly, Weekly, Daily)
+●​ Bedrooms
+●​ Bathrooms
+●​ Property Size
+●​ Amenities
+●​ Images
+●​ Extra Features
+●​ Status (Pending)
+●​ Owner Information
+
+My Properties
+Show all currently login owner properties in a table format.
+Actions:
+
+●​ Update
+●​ Delete
+Status:
+●​ Pending
+●​ Approved
+●​ Rejected
+
+Booking Requests
+Display all booking requests for the currently logged-in owner's properties in a
+table format:
+●​ Tenant Information
+●​ Property Information
+●​ Booking Amount
+Actions:
+●​ Approve
+●​ Reject
+When owner rejects:
+Booking status becomes Rejected.
+
+Admin Dashboard (Private Route)
+Routes:
+●​ All Users
+●​ All Properties
+●​ All Bookings
+●​ Transactions
+
+All Users
+Show all users in a table format
+
+Actions:
+●​ Change Role
+Backend implementation required.
+
+All Properties
+Show all properties in a table format.
+Actions:
+●​ Approve
+●​ Reject
+●​ Update
+●​ Delete
+If rejected:
+Admin: rejection modal must collect rejection feedback. Owners: see rejection
+feedback.
+Owners can see rejection feedback. (See Challenges)
+
+All Bookings
+Show all booking items in a table format
+Admin can monitor booking activities.
+
+Transactions
+Display:
+●​ Transaction ID
+●​ Property Name
+●​ Tenant Name
+●​ Owner Name
+●​ Amount
+●​ Date
+
+Additional Requirements
+●​ Add Requirement for Loading Page
+●​ Add Requirement for Error Page
+●​ Other requirements
+
+UI Design Requirements:
+●​ Unique Design: First, decide what kind of website you want to make.
+Then, search online or check out websites like ThemeForest to get
+ideas for the design. But remember, your website idea shouldn't be
+similar to any projects you've done before or to any examples in our
+modules or conceptual sessions.
+★​You can also look for free resources on blogs to help with your
+website.
+1.​ Keep the main heading style (font, size, color) consistent across all
+sections.
+2.​ Keep paragraph spacing balanced and text easily readable.
+3.​ Maintain uniform image sizes and spacing.
+4. Use the same button style as on the home page.
+5.​ Ensure good spacing and proper alignment.
+6.​ Navbar, Keep the heading/logo same style and size as on the home
+page.
+7.​ Use a grid layout with equal image sizes.
+8.​ Keep all cards equal height and width (especially in services, projects,
+or products section)
+9.​ Use the new X logo instead of the old Twitter bird to match the latest
+rebrand
+10.​Responsiveness: Make it responsive for all devices, including mobile,
+tablet, and desktop views.
+
+Dashboard UI Requirements:
+●​ Responsive design for mobile and tablet screens
+
+●​ Consistent color theme
+●​ Full-width dashboard
+●​ Charts and graphs for quick data visualization
+●​ User profile section
+
+Resources:
+●​ https://uiverse.io/
+●​ https://devmeetsdevs.com/
+●​ https://bootcamp.uxdesign.cc/free-images-and-resources-collectionfor-website-c77f2fc46ce5
+●​ https://themeforest.net/?srsltid=AfmBOopTj6PNz51iuV2YJXUtBP8nt19
+_zT5LG2dToAjIHQqzNCzregn0
+●​ https://codecanyon.net/?srsltid=AfmBOooRoUfeK7lOROpchCuA4hPVj
+5P9WRmtDQJ9K0E6Yhf4VTrHhXKt
+
+Challenge Requirements
+1.​ Use JWT token to protect api’s.
+2.​ Pagination on minimum 2 pages.
+3.​ All search and filter implementation from backend.
+4.​ The owner can view rejection feedback for a specific rejected property by
+clicking the view ( ) button in the property's status column.
+
+👁️
+
+What To Submit
+Admin Email:
+Admin Password:
+Front-End Live Link:
+Client Repository Link:
+Server Repository Link:
+
+Optional Requirement
+●​ Download Monthly Earnings Report (PDF): Allow property owners to
+download a PDF report containing their monthly earnings and booking
+summary.
+●​ Dark / Light Theme Toggle: Implement a theme switcher that lets users
+seamlessly switch between dark and light modes.
+●​ Share Property: Enable users to share property listings through social
+media platforms or by copying a direct link.
+
+
