@@ -22,6 +22,15 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
+// Base route for server status
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    message: 'Obstakl server is running',
+    availableRoutes: ['/health', '/api/auth', '/api/properties', '/api/bookings', '/api/reviews', '/api/favorites', '/api/admin']
+  });
+});
+
 // Base route for API health check
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', timestamp: new Date() });
